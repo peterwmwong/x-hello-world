@@ -1,0 +1,13 @@
+imports:
+- path: deploy.jinja
+
+resources:
+- name: function
+  type: deploy.jinja
+  properties:
+     region: us-central1
+     entryPoint: handler
+     sourceArchiveUrl: gs://cloud-function-sample/function.zip
+outputs:
+- name: function-output
+  value: $(ref.function.cloud-function-response)

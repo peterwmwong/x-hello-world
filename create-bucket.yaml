@@ -1,0 +1,6 @@
+imports:
+- path: create-bucket.jinja
+
+resources:
+- name: function
+  type: create-bucket.jinja
